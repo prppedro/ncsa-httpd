@@ -1,0 +1,84 @@
+In file included from /home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h:28,
+                 from httpd.c:69:
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:1: error: expected identifier or '(' before '<' token
+In file included from /home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h:28,
+                 from httpd.c:69:
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:19:29: warning: character constant too long for its type
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:20:27: warning: character constant too long for its type
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:21:36: warning: character constant too long for its type
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:22:27: warning: character constant too long for its type
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:27: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:29: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:30:16: error: invalid suffix "px" on integer constant
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:31: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:37:15: error: exponent has no digits
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:38:18: error: invalid suffix "px" on integer constant
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:40: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Iconbar'
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:40: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:43: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Iconbar'
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:43: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:46: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Iconbar'
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:46: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:49: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:49: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Iconbar'
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:49: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:52: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:52: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'Iconbar'
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:52: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:55: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:107: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:108: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:110: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:112: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:112: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:113: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:113: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:113: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:114: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:115: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:117: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:122: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:123: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:125: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:126: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:128: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:129: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:130: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:131: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:149: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:154: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:159: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:161: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:171: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:181: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:183: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:184: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:186: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:187: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:189: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:191: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:192: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:194: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:196: error: expected identifier or '(' before '<' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:196: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:198: error: stray '#' in program
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h:210: error: expected identifier or '(' before numeric constant
+In file included from httpd.c:69:
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h:45: warning: data definition has no type or storage class
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before '*' token
+/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h:55: error: expected ')' before '*' token
+In file included from httpd.c:76:
+http_auth.h:39: error: expected declaration specifiers or '...' before 'DBM'
+make[2]: ** [httpd.o] Erro 1
+make[1]: ** [linux] Erro 2
+jj.o: In function `main':
+/home/kurumin/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/cgi-src/jj.c:156: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+dbmdigest.o: In function `add_password':
+dbmdigest.c:(.text+0x2aa): undefined reference to `crypt'
+collect2: ld returned 1 exit status
+make[2]: ** [dbmdigest] Erro 1
+make[1]: ** [linux] Erro 2
+make: ** [linux] Erro 2
