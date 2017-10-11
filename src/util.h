@@ -24,7 +24,7 @@
 #include <time.h>
 #include <sys/stat.h>
 
-/* getline options */
+/* _getline options */
 #define G_RESET_BUF	1
 #define G_FLUSH		2
 #define G_SINGLE_CHAR   4
@@ -49,7 +49,7 @@ void getparents(char *name);
 void no2slash(char *name);
 uid_t uname2id(char *name);
 gid_t gname2id(char *name);
-int getline(sock_buf *sb, char *s, int n, int options, unsigned int timeout);
+int _getline(sock_buf *sb, char *s, int n, int options, unsigned int timeout);
 sock_buf *new_sock_buf(per_request *reqInfo, int sd);
 int eat_ws (FILE* fp);
 int cfg_getline(char *s, int n, FILE *f);

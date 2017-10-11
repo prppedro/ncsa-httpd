@@ -21,6 +21,7 @@
 #include <time.h>
 #include <ndbm.h> 
 #include <fcntl.h>
+#include <crypt.h>
 
 #define LF 10
 #define CR 13

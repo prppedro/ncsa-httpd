@@ -12,7 +12,7 @@ Known Bugs in 1.5.1
 *) Relative urls in imagemaps are broken
 *) doesn't kill cgi scripts if the user aborts
 *) content_length gets reset after scanning cgi headers, instead of before
-*) can core dump on special case in getline (rfc822 line wrapping)
+*) can core dump on special case in _getline (rfc822 line wrapping)
 
 Known Bugs in 1.5.1b3
 ---------------------

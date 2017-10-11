@@ -277,6 +277,7 @@ int recv_fd(int servfd) {
 	  exit(1);
 	}
 	status = *ptr & 255;
+	log_error("stop here",gConfiguration->error_log);
 	if (status == 0) {
 #ifdef FD_BSDRENO
 	  if (msg.msg_controllen != CONTROLLEN) 

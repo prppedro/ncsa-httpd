@@ -23,6 +23,7 @@
 #include "config.h"
 #include "portability.h"
 
+#include <dirent.h>
 #include <stdio.h>
 #ifndef NO_STDLIB_H 
 # include <stdlib.h>

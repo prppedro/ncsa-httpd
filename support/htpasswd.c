@@ -3,7 +3,7 @@
  * 
  * Rob McCool
  */
-
+#define _GNU_SOURCE
 #include "config.h"
 #include "portability.h"
 
@@ -13,9 +13,7 @@
 #include <sys/signal.h>
 #include <stdlib.h>
 #include <time.h>
-#ifdef NEED_CRYPT_H
 #include <crypt.h>
-#endif /* NEED_CRYPT_H */
 
 #define LF 10
 #define CR 13
@@ -45,7 +43,7 @@ void getword(char *word, char *line, char stop) {
     while(line[y++] = line[x++]);
 }
 
-int getline(char *s, int n, FILE *f) {
+int _getline(char *s, int n, FILE *f) {
     register int i=0;
 
     while(1) {
@@ -74,7 +72,7 @@ void putline(FILE *f,char *l) {
 static unsigned char itoa64[] =         /* 0 ... 63 => ascii - 64 */
         "./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-to64(s, v, n)
+void to64(s, v, n)
   register char *s;
   register long v;
   register int n;
@@ -163,7 +161,7 @@ main(int argc, char *argv[]) {
     strcpy(user,argv[2]);
 
     found = 0;
-    while(!(getline(line,MAX_STRING_LEN,f))) {
+    while(!(_getline(line,MAX_STRING_LEN,f))) {
         if(found || (line[0] == '#') || (!line[0])) {
             putline(tfp,line);
             continue;

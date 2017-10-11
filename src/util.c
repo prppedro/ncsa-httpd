@@ -545,7 +545,7 @@ void http2cgi(char* h, char *w) {
 	w++;
 }
 
-void getline_timed_out(int sig) 
+void _getline_timed_out(int sig) 
 {
     char errstr[MAX_STRING_LEN];
 
@@ -582,7 +582,7 @@ sock_buf *new_sock_buf(per_request *reqInfo, int sd)
  * This routine is currently not thread safe.
  * This routine may be thread safe. (blong 3/13/96)
  */
-int getline(sock_buf *sb, char *s, int n, int options, unsigned int timeout)
+int _getline(sock_buf *sb, char *s, int n, int options, unsigned int timeout)
 {
     char *endp = s + n - 1;
     int have_alarmed = 0;
@@ -614,7 +614,7 @@ int getline(sock_buf *sb, char *s, int n, int options, unsigned int timeout)
     do {
 	if (sb->buf_posn == sb->buf_good) {
 	    have_alarmed = 1;
-	    signal(SIGALRM,getline_timed_out);
+	    signal(SIGALRM,_getline_timed_out);
 	    alarm(timeout);
 
 	    ret=read(sb->sd, sb->buffer, size);

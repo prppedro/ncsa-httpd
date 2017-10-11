@@ -53,6 +53,7 @@
 #ifdef KRB5
 # include <krb5.h>
 #endif /* KRB5 */
+#include <crypt.h>
 #include "constants.h"
 #include "fdwrap.h"
 #include "allocate.h"

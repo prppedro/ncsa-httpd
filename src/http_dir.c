@@ -266,29 +266,35 @@ char *find_item(per_request *reqInfo, struct item *list[2], char *path,
       for (p = list[i]; p; p = p->next) {
         /* Special cased for ^^DIRECTORY^^ and ^^BLANKICON^^ */
         if((path[0] == '^') || (!strcmp_match(path,p->apply_path))) {
-	  if(!(p->apply_to)) 
-	    goto found_item;
-	  else if(p->type == BY_PATH) {
-	    if(!strcmp_match(path,p->apply_to))
-	      goto found_item;
-	  } else if(!path_only) {
-	    char pathbak[MAX_STRING_LEN];
-	    
-	    strcpy(pathbak,path);
-	    get_content_type(reqInfo,pathbak,file_type,file_encoding);
-	    if(!file_encoding[0]) {
-	      if(p->type == BY_TYPE) {
-		if(!strcmp_match(file_type,p->apply_to)) 
-		  goto found_item;
-	      }
-	    } else {
-	      if(p->type == BY_ENCODING) {
-		if(!strcmp_match(file_encoding,p->apply_to)) 
-		  goto found_item;
-	      }
-	    }
-	  }
-        }
+	  		if(!(p->apply_to)) 
+	    		goto found_item;
+	  		else if(p->type == BY_PATH) 
+	  		{
+	    		if(!strcmp_match(path,p->apply_to))
+	      			goto found_item; 
+	  		} 
+	  		else if(!path_only) 
+	  		{
+	    		char pathbak[MAX_STRING_LEN];
+	    	
+	    		strcpy(pathbak,path);
+	    		get_content_type(reqInfo,pathbak,file_type,file_encoding);
+	    		if(!file_encoding[0]) {
+	      			if(p->type == BY_TYPE) {
+						if(!strcmp_match(file_type,p->apply_to)) 
+		  					goto found_item;
+	     			}
+	    		} 
+	    		else 
+	    		{
+	      			if(p->type == BY_ENCODING) {
+						if(!strcmp_match(file_encoding,p->apply_to)) 
+		  					goto found_item;
+	      			}
+	    		}
+	  		}
+	  	  
+	     }
       }
     }
     freeString(file_type);
@@ -298,6 +304,7 @@ char *find_item(per_request *reqInfo, struct item *list[2], char *path,
   found_item:
     freeString(file_type);
     freeString(file_encoding);
+
     return p->data;
 }
 
@@ -456,48 +463,56 @@ struct ent *make_dir_entry(per_request *reqInfo, char *path,
             p->alt = NULL;
             p->desc = NULL;
             p->lm = -1;
-        }
-        else {
-            p->lm = finfo.st_mtime;
-            p->size = -1;
-            p->icon = NULL;
-            p->alt = NULL;
-            p->desc = NULL;
-            if(S_ISDIR(finfo.st_mode)) {
-                if(!(p->icon = find_icon(reqInfo,t,1))) {
-		    if (p->icon != NULL) free(p->icon);
-                    p->icon = find_icon(reqInfo,"^^DIRECTORY^^",1);
-                }
-                if(!(tmp = find_alt(reqInfo,t,1))){
-                    p->alt = (char *) malloc(sizeof(char)*4);
-                    strcpy(p->alt,"DIR");
-		}
-		else {
-		    p->alt = strdup(tmp);
-		}
-                p->size = -1;
-                strncpy_dir(p->name,name, MAX_STRING_LEN);
-            }
-            else {
-                p->icon = find_icon(reqInfo,t,0);
-		tmp = find_alt(reqInfo,t,0);
-		if (tmp != NULL) p->alt = strdup(tmp);
-                p->size = finfo.st_size;
-                strcpy(p->name,name);
-            }
-        }
-        if((p->desc = find_desc(reqInfo,t)))
-            p->desc = strdup(p->desc);
-        if((!p->desc) && (dir_opts & SCAN_HTML_TITLES))
-            p->desc = find_title(reqInfo,t);
-    }
-    else {
-        p->icon = NULL;
-        p->alt = NULL;
-        p->desc = NULL;
-        p->size = -1;
-        p->lm = -1;
-        strcpy(p->name,name);
+        	}
+        	else 
+        	{
+            	p->lm = finfo.st_mtime;
+            	p->size = -1;
+            	p->icon = NULL;
+            	p->alt = NULL;
+            	p->desc = NULL;
+            	if(S_ISDIR(finfo.st_mode)) {
+                	if(!(p->icon = find_icon(reqInfo,t,1))) {
+		    			if (p->icon != NULL) free(p->icon);
+                		p->icon = find_icon(reqInfo,"^^DIRECTORY^^",1);
+            		}
+            
+            		if(!(tmp = find_alt(reqInfo,t,1)))
+            		{
+                		p->alt = (char *) malloc(sizeof(char)*4);
+                		strcpy(p->alt,"DIR");
+					}
+					else 
+					{
+						p->alt = strdup(tmp);
+					}
+					
+                	p->size = -1;
+                	strncpy_dir(p->name,name, MAX_STRING_LEN);
+            	}
+            	else 
+            	{
+                	p->icon = find_icon(reqInfo,t,0);
+					tmp = find_alt(reqInfo,t,0);
+					if (tmp != NULL) p->alt = strdup(tmp);
+                		p->size = finfo.st_size;
+                	strcpy(p->name,name);
+            	}
+        	}
+        	
+        	if((p->desc = find_desc(reqInfo,t)))
+            	p->desc = strdup(p->desc);
+        	if((!p->desc) && (dir_opts & SCAN_HTML_TITLES))
+            	p->desc = find_title(reqInfo,t);
+    	}
+    	else 
+    	{
+        	p->icon = NULL;
+        	p->alt = NULL;
+        	p->desc = NULL;
+        	p->size = -1;
+        	p->lm = -1;
+        	strcpy(p->name,name);
     }
     return(p);
 }
@@ -714,16 +729,20 @@ void index_directory(per_request *reqInfo)
             head = p;
             num_ent++;
         }
-    }
-    if(!(ar=(struct ent **) malloc(num_ent*sizeof(struct ent *)))) {
-	Closedir(d);
-        die(reqInfo,SC_NO_MEMORY,"index_directory");
-    }
-    p=head;
-    x=0;
-    while(p) {
-        ar[x++]=p;
-        p = p->next;
+        
+	}
+		
+	if(!(ar=(struct ent **) malloc(num_ent*sizeof(struct ent *)))) {
+		Closedir(d);
+	    die(reqInfo,SC_NO_MEMORY,"index_directory");
+	}
+		
+	p=head;
+	x=0;
+		
+	while(p) {
+	    ar[x++]=p;
+	    p = p->next;
     }
     
     qsort((void *)ar,num_ent,sizeof(struct ent *),

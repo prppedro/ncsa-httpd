@@ -12,7 +12,7 @@ Changes for 1.5.2a
 
 Changes for 1.5.2
 ------------------
-*) Changed getline rfc822 line wrap to check for validity of the next bits
+*) Changed _getline rfc822 line wrap to check for validity of the next bits
    before attempting to see them
 *) Changed imagemap.c so relative URLs actually work
 *) Don't core dump on a method only request
@@ -58,7 +58,7 @@ Changes for 1.5.1
 *) Why do we require full URLs in Redirect?  A local (root) url should work fine
 *) Redirect from .htaccess should work now (completely)
 *) Added hack to allow SSI of CGI, at a great expense of speed (CGI_SSI_HACK)
-*) Made getline() code re-entrant (now has its own sock_buf struct)
+*) Made _getline() code re-entrant (now has its own sock_buf struct)
 
 
 
@@ -219,7 +219,7 @@ Fixes for 1.5 Beta 3
 *) Now log start command to error_log
 *) Improved usage function (for -v command line)
 *) Made sigjmp_buf default define for JMP_BUF (missed from 1.4.2)
-*) Fixed getline()
+*) Fixed _getline()
 
 
 

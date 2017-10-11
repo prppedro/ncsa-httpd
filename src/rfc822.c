@@ -3,7 +3,7 @@
   30-Aug-94 ekr
 */
 
-/*A wrapper around getline to do rfc822 line unfolding*/
+/*A wrapper around _getline to do rfc822 line unfolding*/
 int ht_rfc822_getline(char *s,int n,int f,unsigned int timeout)
   {
     static char pb=0;
@@ -22,7 +22,7 @@ int ht_rfc822_getline(char *s,int n,int f,unsigned int timeout)
         return(0);
     }
    
-    while(!getline(s,n,f,timeout)){
+    while(!_getline(s,n,f,timeout)){
       len=strlen(s);
       s+=len;      
       n-=len;

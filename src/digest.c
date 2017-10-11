@@ -16,6 +16,7 @@
 
 #include "config.h"
 #include "portability.h"
+#include "md5.h"
 
 #ifdef DIGEST_AUTH
 

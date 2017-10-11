@@ -5,6 +5,7 @@
 \***************************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <fcntl.h>
 
 #ifdef __bsdi__
@@ -24,6 +25,7 @@
 #include <netdb.h>
 
 #include <string.h>
+#include <ctype.h>
 
 #define VERSION "1.3"
 

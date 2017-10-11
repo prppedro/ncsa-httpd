@@ -1,6 +1,7 @@
 
 #include "config.h"
 #include "portability.h"
+#include "md5.h"
 
 #include <stdio.h>
 #ifndef NO_STDLIB_H

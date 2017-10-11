@@ -66,7 +66,7 @@
 # include <sys/resource.h>
 #endif /* NO_SYS_RESOURCE_H */
 #include "constants.h"
-#include "/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h"
+#include "fdwrap.h"
 #include "allocate.h"
 #include "httpd.h"
 #include "http_request.h"
@@ -80,6 +80,10 @@
 #include "http_mime.h"
 #include "http_send.h"
 #include "util.h"
+
+
+
+#include <grp.h>
 
 JMP_BUF restart_buffer;
 int mainSocket;
@@ -590,6 +594,7 @@ void child_main(int parent_pipe, SERVER_SOCK_ADDR *sa_server)
 
     while (1) {
 	alarm (0);
+	log_error("passando por aqui",gConfiguration->error_log);
 	if (!keep_alive.bKeepAlive) {
 	    GetDescriptor (parent_pipe);
 	    remote_logname = GetRemoteLogName(sa_server);
@@ -620,6 +625,12 @@ void child_main(int parent_pipe, SERVER_SOCK_ADDR *sa_server)
 #ifndef NO_PASS
 void GetDescriptor(int parent_pipe)
 {
+    /* Isso tudo eh soh para fazer a porra do debug */
+    int len = snprintf(NULL, 0, "%d", parent_pipe); 
+    char* parepipe = malloc(len + 1);  
+    snprintf(parepipe, len + 1, "%d", parent_pipe); 
+
+    log_error(parepipe ,gConfiguration->error_log);
 #ifndef THREADED
     dup2(parent_pipe,0);
     dup2(parent_pipe,1);
