@@ -66,7 +66,7 @@
 # include <sys/resource.h>
 #endif /* NO_SYS_RESOURCE_H */
 #include "constants.h"
-#include "fdwrap.h"
+#include "/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/fdwrap.h"
 #include "allocate.h"
 #include "httpd.h"
 #include "http_request.h"

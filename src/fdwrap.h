@@ -25,7 +25,7 @@
 #ifdef DBM_SUPPORT
 # ifndef _DBMSUPPORT_H  /* moronic OSs which don't protect their own include */
 #  define _DBMSUPPORT_H  /* files from being multiply included */
-#  include <ndbm.h>
+#  include "/home/prppedro/httpd_1.5.2a-export_linux2.0.0/httpd_1.5.2a-export/src/ndbm.h"
 # endif /* _DBMSUPPORT_H */
 #endif /* DBM_SUPPORT */
 
